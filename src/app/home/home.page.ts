@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
-
+colors: string[] = ["black", "pink", "red", "white"]
   constructor() {}
 
 }
