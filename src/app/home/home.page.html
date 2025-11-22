@@ -13,6 +13,8 @@
     </ion-toolbar>
   </ion-header>
 
+
+
   <div id="container">
     <ion-list>
       <ion-item *ngFor="let color of colors">
@@ -24,4 +26,23 @@
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+
+
+  <ion-grid>
+    <ion-row class="header-row">
+      <ion-col><strong>Название книги</strong></ion-col>
+      <ion-col><strong>Автор</strong></ion-col>
+      <ion-col><strong>Год издания</strong></ion-col>
+      <ion-col><strong>Жанр</strong></ion-col>
+    </ion-row>
+
+
+    <ion-row *ngFor="let book of books" class="data-row">
+      <ion-col>{{ book.title }}</ion-col>
+      <ion-col>{{ book.author }}</ion-col>
+      <ion-col>{{ book.year }}</ion-col>
+      <ion-col>{{ book.genre }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
