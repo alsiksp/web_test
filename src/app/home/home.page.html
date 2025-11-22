@@ -12,37 +12,6 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-
-
-  <div id="container">
-    <ion-list>
-      <ion-item *ngFor="let color of colors">
-        <ion-label>
-          {{color}}
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </div>
-
-
-  <ion-grid>
-    <ion-row class="header-row">
-      <ion-col><strong>Название книги</strong></ion-col>
-      <ion-col><strong>Автор</strong></ion-col>
-      <ion-col><strong>Год издания</strong></ion-col>
-      <ion-col><strong>Жанр</strong></ion-col>
-    </ion-row>
-
-
-    <ion-row *ngFor="let book of books" class="data-row">
-      <ion-col>{{ book.title }}</ion-col>
-      <ion-col>{{ book.author }}</ion-col>
-      <ion-col>{{ book.year }}</ion-col>
-      <ion-col>{{ book.genre }}</ion-col>
-    </ion-row>
-  </ion-grid>
-
   <ion-list>
   <ion-item>
     <ion-input label="Книга"></ion-input>
@@ -61,5 +30,31 @@
   </ion-item>
 
 </ion-list>
+
+  <ion-grid>
+    <ion-row class="header-row">
+      <ion-col><strong>Название книги</strong></ion-col>
+      <ion-col><strong>Автор</strong></ion-col>
+      <ion-col><strong>Год издания</strong></ion-col>
+      <ion-col><strong>Жанр</strong></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let book of books" class="data-row">
+      <ion-col>{{ book.title }}</ion-col>
+      <ion-col>{{ book.author }}</ion-col>
+      <ion-col>{{ book.year }}</ion-col>
+      <ion-col>{{ book.genre }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+<ion-button>Читать</ion-button><ion-button>Не читать</ion-button>
+
+      <ion-list>
+      <ion-item *ngFor="let color of colors">
+        <ion-label>
+          {{color}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
 
 </ion-content>
